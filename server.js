@@ -17,6 +17,9 @@ mongoose
 
 // Routes
 const scholarRoutes = require("./routes/scholarRoutes");
+const supportRoutes = require("./routes/supportRoutes");
+
+app.use("/api/support", supportRoutes);
 app.use("/api/scholars", scholarRoutes);
 
 // Server Listening
