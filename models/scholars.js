@@ -24,7 +24,18 @@ const scholarSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    status: { type: String, default: "New" },
+    qualification: { 
+      type: String,
+      required: true,
+    },
+    qualificationDate: { 
+      type: Date,
+      required: true,
+    },
+    status: { 
+      type: String, 
+      default: "New" 
+    },
   },
   { timestamps: true }
 );

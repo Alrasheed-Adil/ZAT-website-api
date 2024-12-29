@@ -2,10 +2,10 @@ const Scholar = require("../models/scholars");
 
 // Create a new scholar
 const createScholar = async (req, res) => {
-    const { name, email, phone, country, major } = req.body;
+    const { name, email, phone, country, major ,qualification ,qualificationDate} = req.body;
   
     try {
-      const newScholar = new Scholar({ name, email, phone, country, major });
+      const newScholar = new Scholar({ name, email, phone, country, major ,qualification, qualificationDate});
       await newScholar.save();
       res.status(201).json(newScholar);
     } catch (error) {
